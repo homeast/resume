@@ -1,0 +1,159 @@
+<html>  
+<head>  
+<title> Drag Demo 1 </title>  
+</head>  
+  
+<body>  
+<div id="div1" style="width:100px;height:100px;position:relative;background:red"></div>
+<div id="div2" style="top:100px;width:100px;height:100px;position:relative;background:blue"></div>
+<script type="text/javascript">
+;(function(){
+    var funcBody = {
+        "addEvent" : addEvent,
+        "getEventObj" : getEventObj,
+        "getTarget" : getTarget,
+        "preventDefault" : preventDefault,
+        "removeEvent" : removeEvent,
+        "getMouseDistance" : getMouseDistance,
+        "mouseMoveFunc" : mouseMoveFunc,
+        "moveElement" : moveElement,
+        "getChangeValue" : getChangeValue,
+        "setElementLT": setElementLT,
+        "funcX" : funcX,
+        "funcY" : funcY,
+    }
+//绑定事件处理程序
+function addEvent(element,type,func){
+    if(element.addEventListener){
+        element.addEventListener(type,func,false);
+    }else if(element.attachEvent){
+        element.attachEvent("on"+type,func);
+    }else{
+        element["on"+type] = func;
+    }
+}
+
+//获取event对象
+function getEventObj(event){
+    return event?event:window.event;
+}
+
+//event的target事件目标
+function getTarget(event){
+    return event.target||event.srcElement;
+}
+
+//取消元素默认行为
+function preventDefault(event){
+    if(event.preventDefault){
+        event.preventDefault();
+    }else{
+        event.returnValue = false;
+    }
+}
+
+//移除事件处理程序
+function removeEvent(element,type,func){
+    if(element.removeEventListener){
+        element.removeEventListener(type,func,false);
+    }else if(element.detachEvent){
+        element.detachEvent("on"+type,func);
+    }else{
+        element["on"+type] = false;
+    }
+}
+
+    //鼠标拖拽
+    function moveElement(element,referenceElement,direction,minDirection,maxDirection,func){
+        funcBody.addEvent(element,"mousedown",getMouseDistance);
+        funcBody.addEvent(document,"mouseup",mouseUpFunc);
+        var returnValue = null;
+        switch(direction){
+            case "x": funcBody.addEvent(referenceElement,"mousemove",mouseMoveFunc(element,"x",minDirection,maxDirection,func));
+                break;
+            case "y": funcBody.addEvent(referenceElement,"mousemove",mouseMoveFunc(element,"y",minDirection,maxDirection,func));
+                break;
+            case "xy": funcBody.addEvent(referenceElement,"mousemove",mouseMoveFunc(element,"xy",minDirection,maxDirection,func));
+                break;
+        }
+    }
+
+    var targetEle = false;  //设置标记用于判断是否点击了拖拽元素
+    var mouseOffsetX = 0,
+        mouseOffsetY = 0;
+
+//鼠标点击元素获取鼠标距元素左侧和顶部的距离
+function getMouseDistance(){
+    event = funcBody.getEventObj(event);
+    target = funcBody.getTarget(event);
+    mouseOffsetX = event.pageX - target.offsetLeft;
+    mouseOffsetY = event.pageY - target.offsetTop;
+    targetEle = target
+}
+
+function getChangeValue(func){
+    func();
+}
+
+//鼠标在元素上移动时执行某函数
+function mouseMoveFunc(element,direction,minDirection,maxDirection,func){
+    return function(){
+        if(element === targetEle){
+            event = arguments[0]||window.event;
+            var mouseX = 0;
+            var mouseY = 0;
+            mouseX = event.pageX - mouseOffsetX;
+            mouseY = event.pageY - mouseOffsetY;
+            funcBody.setElementLT(element,mouseX,mouseY,minDirection,maxDirection,direction);
+            funcBody.getChangeValue(func);
+        }
+    }
+}
+
+//鼠标按键抬起时将canMove设为false
+function mouseUpFunc(){
+    targetEle = false;
+}
+
+//设置元素的left和top值
+function setElementLT(element,x,y,min,max,deriction){
+    switch(deriction){
+        case "x":funcX(element,x,min,max);break;
+        case "y":funcY(element,y,min,max);break;
+        case "xy":funcX(element,x,min,max);
+                  funcY(element,y,min,max);
+                  break;
+    }
+}
+function funcX(element,value,min,max){
+    if(value<min){
+        element.style.left = min + "px";
+    }else if(value>max){
+        element.style.left = max + "px";
+    }else{
+        element.style.left = value + "px";
+    }
+}
+function funcY(element,value,min,max){
+    if(value<min){
+        element.style.top = min + "px";
+    }else if(value>max){
+        element.style.top = max + "px";
+    }else{
+        element.style.top = value + "px";
+    }
+}
+window.funcBody = funcBody;
+})(window);
+
+var div1 = document.querySelector('#div1')
+funcBody.moveElement(div1, document, "x", 0, 500,function () {});
+funcBody.moveElement(div1, document, "y", 0, 500,function () {});
+
+var div2 = document.querySelector('#div2')
+funcBody.moveElement(div2, document, "x", 0, 500,function () {});
+funcBody.moveElement(div2, document, "y", 0, 500,function () {});
+</script> 
+ 
+</body>  
+</html> 

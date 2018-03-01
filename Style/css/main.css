@@ -1,0 +1,752 @@
+.leftmain {
+	height: 120em;
+	background: #ccc;
+}
+.nav-tabs {
+	width: 100%;
+}
+.nav-tabs>li {
+	width: 50%;
+	font-size: 1.2em;
+	text-align: center;
+}
+.btn-group {
+	width: 100%;
+}
+.btn-group button {
+	width: 100%;
+}
+.dropdown-menu {
+	width: 100%;
+}
+.dropdown-menu>li {
+	text-align: center;
+}
+.modelmenu {
+	
+}
+.tubiao span {
+	font-size: 2.5em;
+	margin:.25em;
+	z-index: 66;
+}
+.per-base div{
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+/*按钮开始*/
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:bold+Lobster);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+
+/* -------------- THE button -------------- */
+.button {
+
+/* text */
+	text-decoration: 		none;
+	font: 					24px/1em 'Droid Sans', sans-serif;
+	font-weight: 			bold;
+	text-shadow: 			rgba(255,255,255,.5) 0 1px 0;
+	-webkit-user-select: 	none;
+	-moz-user-select: 		none;
+	user-select: 			none;
+	
+	
+/* layout */
+	padding: 				.5em .6em .4em .6em;
+	margin-top: 				.8em;
+	left: 					0%;
+	display: 				inline-block;
+	position: 				relative;
+	
+	-webkit-border-radius: 	8px;
+	-moz-border-radius: 	8px;
+	border-radius: 	8px;
+	
+/* effects */
+	border-top: 		1px solid rgba(255,255,255,0.8);
+	border-bottom: 		1px solid rgba(0,0,0,0.1);
+	
+	background-image: 	-webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0.7) )), url(noise.png);
+	background-image: 	-moz-radial-gradient(top, ellipse cover, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%), url(noise.png);
+	background-image: 	gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0.7) )), url(noise.png);
+
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: 	background .2s ease-in-out;
+	transition: 		background .2s ease-in-out;
+	
+/* color */
+	color: 				hsl(0, 0%, 40%) !important;
+	background-color: 	hsl(0, 0%, 75%);
+	
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	box-shadow:		 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+}
+
+/* -------------- button (tag) -------------- */
+
+button.button {
+	border-left: none;
+	border-right: none;
+}
+button.button:hover {
+	cursor: pointer;
+}
+
+
+/* -------------- icon -------------- */
+.button:before {
+	font: 			1.2em/0 'Pictos', sans-serif;
+	content: 		attr(data-icon); /* gets the icon value from the custom data attribute and puts it infront of the button label */
+	margin-right: 	0.4em;
+	
+	
+}
+/* icon only */
+.icon {
+	font-weight: normal;
+	font-style: normal;
+	text-indent: 	-999em;
+}
+.icon:before { 
+	margin-right: 	0;
+	display: 		block;
+	height: 		0;
+	text-indent: 	0px;	
+}
+
+
+
+/* -------------- colours -------------- */
+
+.button.orange {
+	color: 				hsl(39, 100%, 30%) !important;
+	background-color: 	hsl(39, 100%, 50%);
+
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(39, 100%, 40%) 0 .1em 3px, hsl(39, 100%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(39, 100%, 40%) 0 .1em 3px, hsl(39, 100%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	box-shadow:		 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(39, 100%, 40%) 0 .1em 3px, hsl(39, 100%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+}
+.button.orange:hover { 	background-color: hsl(39, 100%, 65%); }
+
+
+.button.blue {
+	color: 				hsl(208, 50%, 40%) !important;
+	background-color: 	hsl(208, 100%, 75%);
+	
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(208, 50%, 55%) 0 .1em 3px, hsl(208, 50%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px;	/* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(208, 50%, 55%) 0 .1em 3px, hsl(208, 50%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px;	/* drop shadow */
+	box-shadow: 		inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(208, 50%, 55%) 0 .1em 3px, hsl(208, 50%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px;	/* drop shadow */
+}
+.button.blue:hover { 	background-color: hsl(208, 100%, 83%); }
+
+.button.green {
+	color: 				hsl(88, 70%, 30%) !important;
+	background-color: 	hsl(88, 70%, 60%);
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(88, 70%, 40%) 0 .1em 3px, hsl(88, 70%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(88, 70%, 40%) 0 .1em 3px, hsl(88, 70%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	box-shadow:		 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(88, 70%, 40%) 0 .1em 3px, hsl(88, 70%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+}
+.button.green:hover { 	background-color: hsl(88, 70%, 75%); }
+
+.button.pink {
+	color: 				hsl(340, 100%, 30%) !important;
+	background-color: 	hsl(340, 100%, 75%);
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(340, 70%, 50%) 0 .1em 3px, hsl(340, 80%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(340, 70%, 50%) 0 .1em 3px, hsl(340, 80%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	box-shadow: 		inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(340, 70%, 50%) 0 .1em 3px, hsl(340, 80%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+}
+
+
+
+.button.transparent {
+	color: 	rgba(0,0,0,0.5) !important;
+}
+.button.transparent, .button.transparent:hover, .button.transparent:active {
+	background-color: transparent;
+	background-image: none;
+}
+.button.transparent:hover {
+	opacity: .9;
+}
+
+
+
+/* -------------- Sizes -------------- */
+
+.xs { font-size: 16px; }
+.xl { font-size: 32px; }
+
+
+/* -------------- Materials -------------- */
+
+.button.glossy:after, .button.glass:after {
+	content: 	"";
+	position: 	absolute; 
+    width: 		90%;
+    height: 	60%;
+    top: 		0;
+    left: 		5%;    
+    
+    -webkit-border-radius: 	.5em .5em 1em 1em / .5em .5em 2em 2em;    
+    -moz-border-radius: 	.5em .5em 1em 1em / .5em .5em 2em 2em;
+    border-radius: 			.5em .5em 1em 1em / .5em .5em 2em 2em;
+    
+    background-image: 		-webkit-gradient(linear, 0% 0, 100% 0, from( rgba(255,255,255,.55) ), to( rgba(255,255,255,.5) ),
+    							color-stop(.5, rgba(255,255,255,0)), color-stop(.8, rgba(255,255,255,0)) );	
+    background-image: 		-moz-linear-gradient(left, rgba(255,255,255,.55), rgba(255,255,255,0) 50%, rgba(255,255,255,0) 80%, rgba(255,255,255,.5) );	
+    background-image: 		gradient(linear, 0% 0, 100% 0, from( rgba(255,255,255,.55) ), to( rgba(255,255,255,.5) ),
+    							color-stop(.5, rgba(255,255,255,0)), color-stop(.8, rgba(255,255,255,0)) );	
+}
+.button.glossy:active:after,
+.button.glass:active:after,
+.button.disabled:after,
+.button[disabled]:after
+ { opacity: .6; }
+
+.button.icon.glossy:after,
+.button.icon.glass:after { height: 75% ; }
+
+/* -------------- Glass + Transparent -------------- */
+.button.glass {
+	text-shadow: rgba(255,255,255,.5) 0 -1px 0, rgba(0,0,0,0.18) 0 .18em .15em;
+}
+.button.glass:active {
+	text-shadow: rgba(255,255,255,.3) 0 1px 0, rgba(0,0,0,0.15) 0 .18em .15em;
+}
+
+
+/* -------------- Shapes -------------- */
+
+/* round */
+.round, .round.glossy:after, .round.glass:after { 
+	border-top: none; 
+	-webkit-border-radius: 	1em; 
+	-moz-border-radius: 	1em; 
+	border-radius: 			1em; 
+}
+
+/* oval */
+.oval {
+	border-top: 			none; 
+	padding-left: 			.8em;
+	padding-right: 			.8em;
+	-webkit-border-radius: 	5em / 2em; 
+	-moz-border-radius: 	5em / 2em; 
+	border-radius: 			5em / 2em; 
+}
+.oval.glossy:after, .oval.glass:after { 	
+	top: 					5%;
+	-webkit-border-radius: 	5em / 2em 2em 1em 1em; 
+	-moz-border-radius: 	5em / 2em 2em 1em 1em; 
+	border-radius: 			5em / 2em 2em 1em 1em; 
+}
+.oval.icon {
+	padding-left: 			.8em;
+	padding-right: 			.8em;	
+	-webkit-border-radius: 	1.5em / 1em; 
+	-moz-border-radius: 	1.5em / 1em; 
+	border-radius: 			1.5em / 1em; 
+}
+.oval.icon.glossy:after, .oval.icon.glass:after {	
+	-webkit-border-radius: 	1.5em / 1em; 
+	-moz-border-radius: 	1.5em / 1em; 
+	border-radius: 			1.5em / 1em; 
+}
+
+/* brackets */
+.brackets, .brackets.glossy:after, .brackets.glass:after { 
+	border-top: 			none; 
+	-webkit-border-radius: 	.5em / 1em;
+	-moz-border-radius: 	.5em / 1em;
+	border-radius: 			.5em / 1em;
+}
+
+/* skew */
+.skew { 
+	border-top: 			none; 
+	padding-right: 			1.2em;
+	padding-left: 			0.8em;	
+	-webkit-border-radius: 	5em 1em / 5em 1em;  
+	-moz-border-radius: 	5em 1em / 5em 1em;  
+	border-radius: 			5em 1em / 5em 1em;  
+}
+.skew.glossy:after, .skew.glass:after { 	
+	left: 10%;
+	-webkit-border-radius: 	7em 1em / 5em 1em;
+	-moz-border-radius: 	7em 1em / 5em 1em;
+	border-radius: 			7em 1em / 5em 1em;
+}
+.skew.icon { 	
+	padding-right: 			.9em;
+	padding-left: 			.8em;
+}
+
+/* back */
+.back, .back.glossy:after, .back.glass:after { 
+	border-top-color: 		rgba(255,255,255,0.5);
+	-webkit-border-radius: 	1.6em 1.6em 1em 1em / 4em 4em 1em 1em; 
+	-moz-border-radius: 	1.6em 1.6em 1em 1em / 4em 4em 1em 1em; 
+	border-radius: 			1.6em 1.6em 1em 1em / 4em 4em 1em 1em; 
+}
+.back.glossy:after, .back.glass:after { 
+	 left: 	6%;
+	 width:	88%;
+}
+
+/* knife */
+.knife { 						
+	padding-left: 1.5em;
+	-webkit-border-radius: 	.2em .5em .5em 8em / .2em .5em .5em 5em; 
+	-moz-border-radius: 	.2em .5em .5em 8em / .2em .5em .5em 5em; 
+	border-radius: 			.2em .5em .5em 8em / .2em .5em .5em 5em; 
+}
+.knife.glossy:after, .knife.glass:after {
+	left: 					3%;
+	width: 					97%; 		
+	-webkit-border-radius: 	.1em .5em .5em 8em / .1em .5em .5em 2em;   
+	-moz-border-radius: 	.1em .5em .5em 8em / .1em .5em .5em 2em;   
+	border-radius: 			.1em .5em .5em 8em / .1em .5em .5em 2em;   
+}
+.knife.glossy.icon:after, .knife.glass.icon:after { 
+	left: 					5%; 
+	width: 					95%;
+	-webkit-border-radius: 	.5em .5em 1em 6em / .5em .5em 1em 4em; 
+	-moz-border-radius: 	.5em .5em 1em 6em / .5em .5em 1em 4em; 
+	border-radius: 			.5em .5em 1em 6em / .5em .5em 1em 4em; 
+}
+
+/* shield */
+.shield, .shield.glossy:after, .shield.glass:after { 
+	-webkit-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em; 
+	-moz-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em;
+	border-radius: 			.4em .4em 2em 2em / .4em .4em 3em 3em;
+}
+.shield { 							
+	padding-left: 	.8em;
+	padding-right: 	.8em;
+}
+.shield.icon { 						
+	padding-left: 	.6em; 
+	padding-right: 	.6em;
+}
+
+/* drop */
+.drop {
+	border-top: none;
+	-webkit-border-radius: 	2em 5em  2em .6em / 2em 4em 2em .6em; 
+	-moz-border-radius: 	2em 5em  2em .6em / 2em 4em 2em .6em; 
+	border-radius: 			2em 5em  2em .6em / 2em 4em 2em .6em; 
+}
+.drop.glossy:after, .drop.glass:after { 
+	left: 4%;
+	-webkit-border-radius: 	2em 6em  2em 1em / 2em 4em 2em 2em; 
+	-moz-border-radius: 	2em 6em  2em 1em / 2em 4em 2em 2em;
+	border-radius: 			2em 6em  2em 1em / 2em 4em 2em 2em;
+}
+.drop.icon { 	
+	padding-right: .6em; 
+}
+
+
+/* morph */
+.morph {
+	border-top: none;
+	-webkit-border-radius: 	5em / 2em;
+	-moz-border-radius: 	5em / 2em;
+	border-radius: 			5em / 2em;
+	-webkit-transition: 	-webkit-border-radius .3s ease-in-out;
+	-moz-transition: 		-moz-border-radius .3s ease-in-out;
+	transition: 			-moz-border-radius .3s ease-in-out;
+}
+.morph:hover { 
+	-webkit-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em;
+	-moz-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em;
+	border-radius: 			.4em .4em 2em 2em / .4em .4em 3em 3em;
+}
+.morph:active { 
+	-webkit-border-radius: 	.3em;
+	-moz-border-radius: 	.3em;
+	border-radius: 			.3em;
+}
+.morph:after { 
+	display: none;
+}
+
+
+
+
+/* Some ugly hacks for FF. 
+Thanks to David Hund for some help - http://valuedstandards.com/static/test/buttons/ */
+@-moz-document url-prefix() {
+	.button { text-align: center; }
+	.icon { padding: .5em 1em; }
+	.icon:before { margin-left: -.42em; float: left; }
+	
+	.drop.icon { padding-right: 1.1em; }
+	.shield.icon { padding-left: 1.1em; padding-right: 1.1em; }
+	.skew.icon { padding-right: 1.4em; padding-left: 1.3em; }
+	.oval.icon { padding-left: 1.3em; padding-right: 1.3em;	}
+	.knife { padding-left: 2em; }
+}
+
+
+
+
+
+/*按钮结束  */
+
+
+
+.smallcricle {
+	background: #fb3;
+	width: 15px;
+	height: 15px;
+	margin-left: 10px;
+	border-radius: 50%;
+	float: left;
+}
+.tuoyuan {
+	width: 20px;
+	height: 15px;
+	background: blue;
+	float: left;
+	margin-left: 10px;
+	border-radius: 50% / 50%;
+}
+.line {
+	width: 50%;
+	height: 5px;
+	background: green;
+	float: left;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+.per-input input,textarea {
+	width: 90%;
+	margin-left: 5%;
+	margin-bottom: 20px;
+	position: relative;
+}
+/*多重边框面板*/
+.moreborder{
+	position: relative;
+	top:20px;
+	left: 20px;
+	width: 70%;
+	height: 100px;
+	background: #fff;
+	box-shadow: 0 0 0 10px #655,
+	0 0 0 15px deeppink,
+	0 2px 5px 15px rgba(0,0,0,.6);
+}
+/*带有内圆角面板*/
+.radinside {
+	position: relative;
+	top:50px;
+	left: 20px;
+	width: 70%;
+	height: 100px;
+	background: #fff;
+	border-radius: .8em;
+	padding: 1em;
+	box-shadow: 0 0 0 .6em #655;
+	outline: .6em solid #655;
+}
+/*信封边框类面板*/
+.messageborder {
+	position: relative;
+	top:70px;
+	left: 20px;
+	width: 70%;
+	height: 100px;
+	padding: 1em;
+	border: 1em solid transparent;
+	background: linear-gradient(white, white) padding-box,
+	repeating-linear-gradient(-45deg,
+	red 0, red 12.5%,
+	transparent 0, transparent 25%,
+	#58a 0, #58a 37.5%,
+	transparent 0, transparent 50%)
+	0 / 5em 5em;
+}
+.colorword {
+	width: 90%;
+	height: 100px;
+	margin-left:5%; 
+	background: #7d7de1;
+	color: white;
+	margin-bottom: 20px;
+}
+/*发光字*/
+.lightword {
+	width: 90%;
+	height: 100px;
+	margin-left:5%; 
+	background: #203;
+	color: #ffc;
+	text-shadow: 0 0 .1em, 0 0 .3em;
+}
+.lightword span {
+	background: #203;
+	color: white;
+	transition: 1s;
+}
+
+
+.minmain {
+	height: 100em;
+	background: #fff;
+}
+
+.minmain span {
+	position: absolute;
+	font-size: 2.5em;
+	margin:.25em;
+	z-index: 66;
+}
+.minmainimg {
+	position: absolute;
+}
+.minmain .button {
+	position: absolute;
+}
+.per-picture img {
+	position: relative;
+	margin-top: 30px;
+	width: 70%;
+	margin-left :15%;
+}
+#tooltip{  
+    position: absolute;  
+    background-color: #eee;    
+    width: 220px;  
+    height: 220px;  
+    -webkit-border-radius: 8px;  
+    font-family: "微软雅黑";  
+    padding: 10px;  
+} 
+
+#tooltip-infor{  
+    position: absolute;   
+    -webkit-border-radius: 8px;  
+    font-family: "微软雅黑";  
+    padding: 10px;  
+} 
+
+.panel {
+	left: 10%;
+	width: 80%;
+	height: 100px;
+	position: relative;
+}
+.panel-heading {
+	height: 30%;
+}
+.minmain > .panel {
+	margin-bottom: 0;
+	position: absolute;
+}
+
+.minmain img {
+	width: 128px;
+	height: 128px;
+}
+
+.minmain input {
+	z-index: 500;
+	position: absolute;
+	top: 20px;
+	width: 50%;
+	left: 10%;
+}
+.minmain textarea {
+	z-index: 500;
+	position: absolute;
+	top: 20px;
+	width: 50%;
+	left: 10%;
+}
+.minmain>div {
+	position: absolute;
+}
+.main {
+	width: 100%;
+	height: 100%;
+}
+.list {
+	position: relative;
+	width: 95%;
+	margin-bottom: 30px;
+}
+.base {
+	text-align: center;
+	padding:20px 40px;
+	position: relative;
+}
+.information1 img {
+	
+}
+.infor-name {
+	font-size: 30px;
+	font-family: "yahei";
+	margin: 8px;
+}
+.infor-message>div {
+	float: left;
+	margin-top: 10px;
+	margin-left: 60px;
+	color: green;
+}
+.infor-content {
+	background: #4cd44c;
+	margin-top: 25px;
+	text-align: center;
+	color: #fff;
+	padding:10px 25px;
+}
+.ed-title {
+	width: 90%;
+	margin-left: 5%;
+	font-size: 24px;
+	font-family: "yahei";
+	border-bottom: 2px solid #00c091;
+}
+.main span {
+	font-size: 27px;
+	position: relative;
+}
+.ed-base {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 15px;
+	color: #00c091;
+}
+.ed-base>div {
+	margin-right: 40px;
+	float: left;
+}
+.ed-content {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 15px;
+}
+.we-title {
+	width: 90%;
+	margin-left: 5%;
+	font-size: 24px;
+	font-family: "yahei";
+	border-bottom: 2px solid #00c091;
+}
+.we-base {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 15px;
+	color: #00c091;
+}
+.we-base>div {
+	margin-right: 40px;
+	float: left;
+}
+.we-content {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 15px;
+}
+.we-content span {
+	position: inherit;
+	font-size: 21px;
+	color: #00c091;
+}
+.sk-title {
+	width: 90%;
+	margin-left: 5%;
+	font-size: 24px;
+	font-family: "yahei";
+	border-bottom: 2px solid #00c091;
+}
+.sk-stars {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 15px;
+}
+.sk-stars a {
+	float:left;
+	width:26px;
+	height:20px;
+	background:url(../image/star1.png) 0 -20px no-repeat;
+}
+.skdiv {
+	width: 30%;
+	height: 40px;
+	float: left;
+	margin-right: 13%;
+	margin-left: 2%;
+	margin-top: 15px;
+}
+
+.sk-content {
+	float: left;
+	font-size: 18px;
+	font-family: "yahei";
+	color: #00c091;
+	margin-right: 15px;
+}
+.evaluate1 {
+	width: 90%;
+	margin-left: 5%;
+}
+.ev-content	{
+	font-family: "yahei";
+	width: 60%;
+	float: left;
+}
+.ev-title {
+	font-size: 24px;
+	font-family: "yahei";
+	border-bottom: 2px solid #00c091;
+	margin-bottom: 15px;
+}
+.ev-img img {
+	width: 270px;
+	height: 170px;
+	margin-left: 50px;
+	margin-top: 15px;
+}
+.ev-img {
+	float: left;
+}

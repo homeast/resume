@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+<title>Arguments Test</title>  
+</head>  
+<body>  
+<script>  
+var name = "The Window";   
+　　var object = {   
+　　　　name : "My Object",   
+　　　　getNameFunc : function(){   
+　　　　　　return function(){   
+　　　　　　　　return this.name; //试试object.name  
+　　　　　};   
+　　　　}   
+};   
+//alert(object.getNameFunc()());  //The Window
+function f1(){
+    //todo
+}
+var f2 = function(){
+    //todo
+};
+var f3 = new Function('x','console.log(x)');
+ 
+var o1 = {};
+var o2 = new Object();
+var o3 = new f1();
+ 
+console.log(
+    typeof f1,//function
+    typeof f2,//function
+    typeof f3,//function
+    typeof o1,//object
+    typeof o2,//object
+    typeof o3 //object
+);
+console.log(f2) ; 
+</script> 
+</body>  
+</html>
